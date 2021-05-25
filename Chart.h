@@ -19,7 +19,7 @@ class Chart : public QChart
     Q_OBJECT
 
 public:
-    Chart();
+    Chart(QString title);
     void addPoint(int x, int y);
     QChartView* getChartView();
     QLineSeries* Series();

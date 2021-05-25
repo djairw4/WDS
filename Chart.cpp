@@ -12,7 +12,7 @@
  *  Tworzy wykres bez danych pomiarowych.
  */
 
-Chart::Chart()
+Chart::Chart(QString title)
 {
     this->series = new QLineSeries();
     this->legend()->hide();
@@ -26,7 +26,7 @@ Chart::Chart()
     font.setPixelSize(18);
     this->setTitleFont(font);
     this->setTitleBrush(QBrush(Qt::black));
-    this->setTitle("Czujnik Prawy");
+    this->setTitle(title);
 
     QPen pen(QRgb(0x0000ff));
     pen.setWidth(2);

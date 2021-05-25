@@ -16,6 +16,9 @@
 #include "Settings.h"
 #include "Chart.h"
 #include "Waves.h"
+#include <QSpinBox>
+
+
 
 /*!
 *   \file
@@ -47,13 +50,25 @@ private slots:
   void ledOn();
   void ledOff();
 
+  void on_spinBox_valueChanged(int arg1);
+
+  void on_spinBox_2_valueChanged(int arg1);
+
+  void on_spinBox_3_valueChanged(int arg1);
+
+  void on_horizontalScrollBar_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *graphicsScene;
     Settings * dial;
-    Chart *chart;
+    Chart * chart[4];
     Waves *waves;
+    int zakresy[3];
+    int rotacja;
 
+signals:
+  void valueChanged(int i);
 
 };
 #endif // MAINWINDOW_H

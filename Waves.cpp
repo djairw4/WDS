@@ -15,8 +15,9 @@
 Waves::Waves()
 {
     scene = new QGraphicsScene();
-    scene->addPixmap( QPixmap( "auto.jpg" ) );
-    QPen rysuj (QColor(250,250,250),3);
+    QPixmap  pic= (QPixmap( "auto.jpg" )).scaled(385,385);
+    scene->addPixmap( pic );
+    QPen rysuj (QColor(240,240,240),8);
 /*
    line1= scene->addLine(110, 0, 160, 0, rysuj);
    line3 =scene->addLine(110, -50, 160, -50,rysuj);
@@ -38,6 +39,7 @@ Waves::Waves()
    line15= scene->addLine(230, -25, 280, -25,rysuj);
    line13= scene->addLine(230, 25, 280, 25,rysuj);
 */
+    /*
    lines1[0] = scene->addLine(110, 0, 160, 0, rysuj);
    lines1[1] = scene->addLine(110, -25, 160, -25,rysuj);
    lines1[2] = scene->addLine(110, -50, 160, -50,rysuj);
@@ -65,8 +67,14 @@ Waves::Waves()
    lines4[3] =scene->addLine(230, -50, 280, -50,rysuj);
 
    lines[3]=lines4;
+*/
+   int x_start=77, y_start=25, length=50, x_gap=10, y_gap=-25;
 
-
+for (int i=0;i<4;++i){
+    for(int j=0;j<4;++j){
+        lines[i][j]= scene->addLine(x_start+i*(x_gap+length), y_start+j*y_gap, x_start+length+i*(x_gap+length), y_start+j*y_gap, rysuj);
+    }
+}
 
 
 }
@@ -80,7 +88,7 @@ Waves::Waves()
  *  \param sensors - tabela z odczytami odległości z czujników
  */
 
-void Waves::setColour(int sensors[])
+void Waves::setColour(int sensors[],int ranges[])
 {
 QColor Gray = QColor(240,240,240);
 QColor Green = QColor(0,220,50);
@@ -95,21 +103,21 @@ int line_width=8;
             lines[i][2] ->setPen(QPen(Gray,line_width));
             lines[i][3] ->setPen(QPen(Gray,line_width));
         }
-    else if(sensors[i]>120){
+    else if(sensors[i]>ranges[0]){
 
-lines[i][0] ->setPen(QPen(Gray,line_width));
+        lines[i][0] ->setPen(QPen(Gray,line_width));
 lines[i][1] ->setPen(QPen(Gray,line_width));
 lines[i][2] ->setPen(QPen(Gray,line_width));
 lines[i][3] ->setPen(QPen(Green,line_width));
 
     }
-    else if(sensors[i]>60){
+    else if(sensors[i]>ranges[1]){
         lines[i][0]->setPen(QPen(Gray,line_width));
         lines[i][1] ->setPen(QPen(Gray,line_width));
         lines[i][2]->setPen(QPen(Yellow,line_width));
         lines[i][3]->setPen(QPen(Gray,line_width));
     }
-    else if(sensors[i]>30){
+    else if(sensors[i]>ranges[2]){
        lines[i][0]->setPen(QPen(Gray,line_width));
        lines[i][1] ->setPen(QPen(Orange,line_width));
        lines[i][2]->setPen(QPen(Gray,line_width));

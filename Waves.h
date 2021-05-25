@@ -19,7 +19,7 @@ class Waves
 public:
 
     Waves();
-    void setColour(int sensors[]);
+    void setColour(int sensors[],int ranges[]);
     QGraphicsScene * getScene();
 private:
     QGraphicsScene * scene;
@@ -29,7 +29,7 @@ private:
     QGraphicsLineItem* lines3 [4];
     QGraphicsLineItem* lines4 [4];
 
-    QGraphicsLineItem** lines [4];
+    QGraphicsLineItem* lines [4][4];
 
     QGraphicsLineItem * line1;
     QGraphicsLineItem * line2;
@@ -50,6 +50,7 @@ private:
     QGraphicsLineItem * line14;
     QGraphicsLineItem * line15;
     QGraphicsLineItem * line16;
+
 };
 
 #endif // WAVES_H
