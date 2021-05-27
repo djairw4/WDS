@@ -1,4 +1,4 @@
-#include "Settings.h"
+#include "Settings.hpp"
 #include "ui_Settings.h"
 #include "CRC8.hpp"
 
@@ -8,15 +8,10 @@
 *   \brief Implementacja metod klasy Settings
 */
 
-/*!
- * \brief Konstruktor klasy.
- *
- *  Tworzy okienko z ustawieniami komunikacji z portem szeregowym
- */
 
-Settings::Settings(QMainWindow *parent)
-    : QDialog(parent)
-    , ui(new Ui::Settings)
+
+Settings::Settings()
+    : ui(new Ui::Settings)
 {
     ui->setupUi(this);
     this->device = new QSerialPort(this);
@@ -25,20 +20,19 @@ Settings::Settings(QMainWindow *parent)
 
 }
 
-/*!
- * \brief Destruktor klasy.
- */
+
 Settings::~Settings()
 {
     delete ui;
 }
 
+QSerialPort *Settings::Device()
+{
+    return device;
+}
 
-/*!
- * \brief Slot szukania dostępnych portów
- *
- *  Nazwy znalezionych portów wyświetla w obiekcie comboBoxDevices
- */
+
+
 void Settings::on_pushButtonSearch_clicked()
 {
       ui->comboBoxDevices->clear();
@@ -53,11 +47,7 @@ void Settings::on_pushButtonSearch_clicked()
 }
 
 
-/*!
- * \brief Slot połączenia z wybranym portem szeregowym
- *
- *  Łączy z portem i ustawia parametry transmisji oraz emitucje sygnał Connection()
- */
+
 void Settings::ConnectSlot()
 {
     if(ui->comboBoxDevices->count() == 0) {
@@ -91,11 +81,7 @@ void Settings::ConnectSlot()
 
 
 
-/*!
- * \brief Slot połączenia z wybranym portem szeregowym
- *
- *  Łączy z portem i ustawia parametry transmisji oraz emitucje sygnał Connection()
- */
+
 void Settings::DisconnectSlot()
 {
     if(this->device->isOpen()) {

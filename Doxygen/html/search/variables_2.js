@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graphicsscene_114',['graphicsScene',['../classMainWindow.html#a3f80bd4f3f8884fddf82723e95589554',1,'MainWindow']]]
+  ['lines_112',['lines',['../classWaves.html#a11da8fcd03a03fd7eab993f4b6e5490a',1,'Waves']]]
 ];

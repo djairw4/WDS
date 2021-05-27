@@ -20,10 +20,10 @@ SOURCES += \
 
 HEADERS += \
     CRC8.hpp \
-    Chart.h \
-    Settings.h \
-    Waves.h \
-    mainwindow.h
+    Chart.hpp \
+    Settings.hpp \
+    Waves.hpp \
+    mainwindow.hpp
 
 FORMS += \
     Settings.ui \

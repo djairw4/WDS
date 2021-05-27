@@ -1,4 +1,4 @@
-#include "Chart.h"
+#include "Chart.hpp"
 
 
 /*!
@@ -6,11 +6,6 @@
 *   \brief Implementacja metod klasy Chart
 */
 
-/*!
- * \brief Konstruktor klasy.
- *
- *  Tworzy wykres bez danych pomiarowych.
- */
 
 Chart::Chart(QString title)
 {
@@ -36,11 +31,7 @@ Chart::Chart(QString title)
 }
 
 
-/*!
- * \brief Dodaje nowy punkt do wykresu.
- *
- *  Oraz aktualizuje wyświetlany zakres pomiarowy.
- */
+
 void Chart::addPoint(int x, int y)
 {
     this->series->append(x, y);
@@ -49,33 +40,24 @@ void Chart::addPoint(int x, int y)
 }
 
 
-/*!
- * \brief Zwraca widok wykresu.
- */
 QChartView* Chart::getChartView()
 {
     return chartView;
 }
 
-/*!
- * \brief Zwraca serię danych.
- */
+
 QLineSeries* Chart::Series()
 {
     return series;
 }
 
-/*!
- * \brief Zwraca aktualną liczbę punktów pomiarowych
- */
+
 int Chart::PointCounter()
 {
     return pointCounter;
 }
 
-/*!
- * \brief Inkrementuje licznik punktów pomiarowych
- */
+
 void Chart::increaseCounter()
 {
     pointCounter++;

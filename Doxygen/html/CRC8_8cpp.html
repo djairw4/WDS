@@ -80,9 +80,9 @@ Funkcje</h2></td></tr>
 <tr class="memitem:a3b6cdad88337909c7008f4c45fa391f8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CRC8_8cpp.html#a3b6cdad88337909c7008f4c45fa391f8">CRC8_SingleByte</a> (unsigned int Data2)</td></tr>
 <tr class="memdesc:a3b6cdad88337909c7008f4c45fa391f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC8 dla pojedynczego bajtu.  <a href="CRC8_8cpp.html#a3b6cdad88337909c7008f4c45fa391f8">Więcej...</a><br /></td></tr>
 <tr class="separator:a3b6cdad88337909c7008f4c45fa391f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65074ac5e10326b1188a3804b585793d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CRC8_8cpp.html#a65074ac5e10326b1188a3804b585793d">ParseDataFrame</a> (QString DataFrame, int sensors[])</td></tr>
-<tr class="memdesc:a65074ac5e10326b1188a3804b585793d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Podział ramki danych.  <a href="CRC8_8cpp.html#a65074ac5e10326b1188a3804b585793d">Więcej...</a><br /></td></tr>
-<tr class="separator:a65074ac5e10326b1188a3804b585793d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c69b47a89daf1dde8a8fc499ffd226"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CRC8_8cpp.html#ad1c69b47a89daf1dde8a8fc499ffd226">ParseDataFrame</a> (QString DataFrame, int sensors[4])</td></tr>
+<tr class="memdesc:ad1c69b47a89daf1dde8a8fc499ffd226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Podział ramki danych.  <a href="CRC8_8cpp.html#ad1c69b47a89daf1dde8a8fc499ffd226">Więcej...</a><br /></td></tr>
+<tr class="separator:ad1c69b47a89daf1dde8a8fc499ffd226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Implementacja funkcji obsługujących sumę kontrolną </p>
@@ -116,8 +116,8 @@ Funkcje</h2></td></tr>
 <p>CRC8 dla ramki danych. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pDataFrame</td><td>- wskaźnik na ramkę danych</td></tr>
-    <tr><td class="paramname">Len</td><td>- długość ramki</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pDataFrame</td><td>- wskaźnik na ramkę danych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Len</td><td>- długość ramki </td></tr>
   </table>
   </dd>
 </dl>
@@ -144,7 +144,7 @@ Funkcje</h2></td></tr>
 <p>CRC8 dla pojedynczego bajtu. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Data2</td><td>- przetwarzany bajt</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">Data2</td><td>- przetwarzany bajt </td></tr>
   </table>
   </dd>
 </dl>
@@ -152,8 +152,8 @@ Funkcje</h2></td></tr>
 
 </div>
 </div>
-<a id="a65074ac5e10326b1188a3804b585793d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65074ac5e10326b1188a3804b585793d">&#9670;&nbsp;</a></span>ParseDataFrame()</h2>
+<a id="ad1c69b47a89daf1dde8a8fc499ffd226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1c69b47a89daf1dde8a8fc499ffd226">&#9670;&nbsp;</a></span>ParseDataFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +168,7 @@ Funkcje</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sensors</em>[]&#160;</td>
+          <td class="paramname"><em>sensors</em>[4]&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -182,12 +182,12 @@ Funkcje</h2></td></tr>
 <p>Podział ramki na poszczególne elementy i sprawdzenie jej poprawności - nagłówek, suma kontrolna.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">DataFrame</td><td>- ramka danych</td></tr>
-    <tr><td class="paramname">sensors</td><td>- tablica, do której zostaną zapisane odczyty z czujników</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">DataFrame</td><td>- ramka danych</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">sensors</td><td>- tablica, do której zostaną zapisane odczyty z czujników</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Zwraca</dt><dd>true - jeśli ramka jest poprawna false - jeśli ramka jest uszkodzona </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd><code>True</code> - jeśli ramka jest poprawna <code>False</code> - jeśli ramka jest uszkodzona </dd></dl>
 
 </div>
 </div>

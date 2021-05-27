@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['waves_2ecpp_82',['Waves.cpp',['../Waves_8cpp.html',1,'']]],
-  ['waves_2eh_83',['Waves.h',['../Waves_8h.html',1,'']]]
+  ['settings_2ecpp_73',['Settings.cpp',['../Settings_8cpp.html',1,'']]],
+  ['settings_2ehpp_74',['Settings.hpp',['../Settings_8hpp.html',1,'']]]
 ];

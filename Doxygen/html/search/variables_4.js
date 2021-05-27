@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pointcounter_131',['pointCounter',['../classChart.html#a808ea5bcfd984fd707b174509d8ba5bf',1,'Chart']]]
+  ['ranges_114',['ranges',['../classMainWindow.html#a2545c6819de7466e17b4ce1efbe19089',1,'MainWindow']]]
 ];

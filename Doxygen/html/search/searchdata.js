@@ -3,11 +3,12 @@ var indexSectionsWithContent =
   0: "abcdgilmoprsuw~",
   1: "cmsw",
   2: "u",
-  3: "cmsw",
+  3: "cmrsw",
   4: "acdgilmoprsw~",
-  5: "cdglpsuw",
+  5: "cdlprsuw",
   6: "b",
-  7: "p"
+  7: "p",
+  8: "w"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "typedefs",
-  7: "defines"
+  7: "defines",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "Funkcje",
   5: "Zmienne",
   6: "Definicje typów",
-  7: "Definicje"
+  7: "Definicje",
+  8: "Strony"
 };
 

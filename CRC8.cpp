@@ -6,13 +6,7 @@
 */
 
 
-/*!
-*   \brief CRC8 dla pojedynczego bajtu
-*
-*   \param Data2 - przetwarzany bajt
-*
-*   \return sumę kontrolną
-*/
+
 unsigned int CRC8_SingleByte(unsigned int Data2) {
     unsigned int Poly = ( POLYNOMIAL_9 << 7);
     for (int Idx = 0; Idx < 8; ++Idx) {
@@ -23,16 +17,7 @@ unsigned int CRC8_SingleByte(unsigned int Data2) {
     return Data2;
 }
 
-/*!
-*   \brief CRC8 dla ramki danych.
-*
-*   \param pDataFrame - wskaźnik na ramkę danych
-*
-*   \param Len - długość ramki
-*
-*   \return sumę kontrolną
-*
-*/
+
 byte CRC8_DataArray(const byte *pDataFrame, byte Len) {
     unsigned int Data2 = pDataFrame[0] << 8;
 
@@ -45,20 +30,7 @@ byte CRC8_DataArray(const byte *pDataFrame, byte Len) {
 }
 
 
-/*!
-*   \brief Podział ramki danych.
-*
-*   Podział ramki na poszczególne elementy i sprawdzenie jej poprawności - nagłówek, suma kontrolna.
-*
-*   \param DataFrame - ramka danych
-*
-*   \param sensors - tablica, do której zostaną zapisane odczyty z czujników
-*
-*   \return
-*   true - jeśli ramka jest poprawna
-*   false - jeśli ramka jest uszkodzona
-*/
-bool ParseDataFrame( QString DataFrame, int sensors[]){
+bool ParseDataFrame( QString DataFrame, int sensors[4]){
     QStringList list = DataFrame.split(' ');
     qDebug() << list;
     //konwersja danych do tablicy unsigned char

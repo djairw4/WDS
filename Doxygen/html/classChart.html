@@ -70,20 +70,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Rysowanie wykresu historii pomiarów dla czujnika prawego.  
+<p>Rysowanie wykresu historii pomiarów dla czujnika odległości.  
  <a href="classChart.html#details">Więcej...</a></p>
 
-<p><code>#include &quot;<a class="el" href="Chart_8h_source.html">Chart.h</a>&quot;</code></p>
+<p><code>#include &quot;<a class="el" href="Chart_8hpp_source.html">Chart.hpp</a>&quot;</code></p>
 
 <p>Dziedziczy QChart.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a61896fddeb02818af2892cb6d9cdadb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChart.html#a61896fddeb02818af2892cb6d9cdadb4">Chart</a> ()</td></tr>
-<tr class="memdesc:a61896fddeb02818af2892cb6d9cdadb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy.  <a href="classChart.html#a61896fddeb02818af2892cb6d9cdadb4">Więcej...</a><br /></td></tr>
-<tr class="separator:a61896fddeb02818af2892cb6d9cdadb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60727f9b95cae30dd9a3989fa3292c75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChart.html#a60727f9b95cae30dd9a3989fa3292c75">Chart</a> (QString title)</td></tr>
+<tr class="memdesc:a60727f9b95cae30dd9a3989fa3292c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy.  <a href="classChart.html#a60727f9b95cae30dd9a3989fa3292c75">Więcej...</a><br /></td></tr>
+<tr class="separator:a60727f9b95cae30dd9a3989fa3292c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa56b06e5cd008fb1c2db55bd726f49f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChart.html#aa56b06e5cd008fb1c2db55bd726f49f9">addPoint</a> (int x, int y)</td></tr>
-<tr class="memdesc:aa56b06e5cd008fb1c2db55bd726f49f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje nowy punkt do wykresu.  <a href="classChart.html#aa56b06e5cd008fb1c2db55bd726f49f9">Więcej...</a><br /></td></tr>
+<tr class="memdesc:aa56b06e5cd008fb1c2db55bd726f49f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje nowy punkt do wykresu, aktualizuje wyświetlany zakres pomiarowy i licznik pomiarów.  <a href="classChart.html#aa56b06e5cd008fb1c2db55bd726f49f9">Więcej...</a><br /></td></tr>
 <tr class="separator:aa56b06e5cd008fb1c2db55bd726f49f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82b367fa77f9a0ce6cf4362407e6aa8f"><td class="memItemLeft" align="right" valign="top">QChartView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChart.html#a82b367fa77f9a0ce6cf4362407e6aa8f">getChartView</a> ()</td></tr>
 <tr class="memdesc:a82b367fa77f9a0ce6cf4362407e6aa8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca widok wykresu.  <a href="classChart.html#a82b367fa77f9a0ce6cf4362407e6aa8f">Więcej...</a><br /></td></tr>
@@ -95,23 +95,26 @@ Metody publiczne</h2></td></tr>
 <tr class="memdesc:a4a324cfe6c43f4dfdb2e59c2ce5e5c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca aktualną liczbę punktów pomiarowych.  <a href="classChart.html#a4a324cfe6c43f4dfdb2e59c2ce5e5c91">Więcej...</a><br /></td></tr>
 <tr class="separator:a4a324cfe6c43f4dfdb2e59c2ce5e5c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a161d68a4896dfd2f5bf01f81711664ef"><td class="memItemLeft" align="right" valign="top">QLineSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChart.html#a161d68a4896dfd2f5bf01f81711664ef">Series</a> ()</td></tr>
-<tr class="memdesc:a161d68a4896dfd2f5bf01f81711664ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca serię danych.  <a href="classChart.html#a161d68a4896dfd2f5bf01f81711664ef">Więcej...</a><br /></td></tr>
+<tr class="memdesc:a161d68a4896dfd2f5bf01f81711664ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca serię danych wykresu.  <a href="classChart.html#a161d68a4896dfd2f5bf01f81711664ef">Więcej...</a><br /></td></tr>
 <tr class="separator:a161d68a4896dfd2f5bf01f81711664ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:a093953bc7dc2aedcbe27f23e569d3eca"><td class="memItemLeft" align="right" valign="top">QChartView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChart.html#a093953bc7dc2aedcbe27f23e569d3eca">chartView</a></td></tr>
+<tr class="memdesc:a093953bc7dc2aedcbe27f23e569d3eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widok wykresu.  <a href="classChart.html#a093953bc7dc2aedcbe27f23e569d3eca">Więcej...</a><br /></td></tr>
 <tr class="separator:a093953bc7dc2aedcbe27f23e569d3eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a808ea5bcfd984fd707b174509d8ba5bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChart.html#a808ea5bcfd984fd707b174509d8ba5bf">pointCounter</a> =0</td></tr>
+<tr class="memdesc:a808ea5bcfd984fd707b174509d8ba5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Licznik punktów pomiarowych.  <a href="classChart.html#a808ea5bcfd984fd707b174509d8ba5bf">Więcej...</a><br /></td></tr>
 <tr class="separator:a808ea5bcfd984fd707b174509d8ba5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac30247013ebcd30c0dce4db8cddc5d42"><td class="memItemLeft" align="right" valign="top">QLineSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChart.html#ac30247013ebcd30c0dce4db8cddc5d42">series</a></td></tr>
+<tr class="memdesc:ac30247013ebcd30c0dce4db8cddc5d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seria danych pomiarowych.  <a href="classChart.html#ac30247013ebcd30c0dce4db8cddc5d42">Więcej...</a><br /></td></tr>
 <tr class="separator:ac30247013ebcd30c0dce4db8cddc5d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock"><p>Rysowanie wykresu historii pomiarów dla czujnika prawego. </p>
+<div class="textblock"><p>Rysowanie wykresu historii pomiarów dla czujnika odległości. </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
-<a id="a61896fddeb02818af2892cb6d9cdadb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61896fddeb02818af2892cb6d9cdadb4">&#9670;&nbsp;</a></span>Chart()</h2>
+<a id="a60727f9b95cae30dd9a3989fa3292c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60727f9b95cae30dd9a3989fa3292c75">&#9670;&nbsp;</a></span>Chart()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -119,14 +122,21 @@ Atrybuty prywatne</h2></td></tr>
         <tr>
           <td class="memname">Chart::Chart </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>title</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Konstruktor klasy. </p>
-<p>Tworzy wykres bez danych pomiarowych. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>- tytuł wykresu, obiekt klasy QString</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Tworzy wykres bez danych pomiarowych. Wykres zawiera określone dla czujnika ogległości, nazwane osie (Y - odległość [cm], X - moment czasu od początku przesyłu danych [s] ), podany w parametrze tytuł wykresu, zakres pomiarowy na osi X ustawiony na 20 ostatnich pomiarów oraz domyślny zakres wartości między 0 a 200cm. </p>
 
 </div>
 </div>
@@ -157,8 +167,14 @@ Atrybuty prywatne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Dodaje nowy punkt do wykresu. </p>
-<p>Oraz aktualizuje wyświetlany zakres pomiarowy. </p>
+<p>Dodaje nowy punkt do wykresu, aktualizuje wyświetlany zakres pomiarowy i licznik pomiarów. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>- współrzędna x nowego punktu </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>- współrzędna y nowego punktu </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -178,6 +194,7 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Zwraca widok wykresu. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na pole prywatne <code>chartView</code> typu QChartView </dd></dl>
 
 </div>
 </div>
@@ -216,6 +233,7 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Zwraca aktualną liczbę punktów pomiarowych. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>pole prywatne <code>pointCounter</code> definiujące licznik punktów pomiarowych </dd></dl>
 
 </div>
 </div>
@@ -234,7 +252,8 @@ Atrybuty prywatne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Zwraca serię danych. </p>
+<p>Zwraca serię danych wykresu. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na pole prywatne <code>series</code> typu QLineSeries </dd></dl>
 
 </div>
 </div>
@@ -259,6 +278,8 @@ Atrybuty prywatne</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Widok wykresu. </p>
+
 </div>
 </div>
 <a id="a808ea5bcfd984fd707b174509d8ba5bf"></a>
@@ -280,6 +301,8 @@ Atrybuty prywatne</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Licznik punktów pomiarowych. </p>
 
 </div>
 </div>
@@ -303,10 +326,12 @@ Atrybuty prywatne</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Seria danych pomiarowych. </p>
+
 </div>
 </div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
-<li><a class="el" href="Chart_8h_source.html">Chart.h</a></li>
+<li><a class="el" href="Chart_8hpp_source.html">Chart.hpp</a></li>
 <li><a class="el" href="Chart_8cpp.html">Chart.cpp</a></li>
 </ul>
 </div><!-- contents -->
