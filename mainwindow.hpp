@@ -107,6 +107,7 @@ private slots:
      */
     void on_horizontalScrollBar_valueChanged(int value);
 
+
 private:
     Ui::MainWindow *ui; //!< Interfejs głównego okna
     Settings * dial; //!< Okno ustawień

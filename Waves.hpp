@@ -21,7 +21,7 @@ public:
     /*!
      * \brief Konstruktor klasy.
      *
-     * Wyrysowuje obraz samochodu i fale ultradźwiękowe w kolorze szarym, który utożsamia również brak
+     * Inicjalizuje obiekt samochodu i fal ultradźwiękowych w kolorze szarym, który utożsamia również brak
      * wykrytych przeszkód
      */
     Waves();
@@ -37,8 +37,8 @@ public:
      *  * kolor POMARAŃCZOWY - przeszkoda dalej niż 30 cm
      *  * kolor CZERWONY - przeszkoda znajduję w odległości nie większej niż 30 cm
      *
-     *  \param[in] sensors - tabela z odczytami odległości z czujników
-     *  \param[in] ranges - zakresy wartości dla poszczególnych kolorów wynikające z legendy
+     *  \param[in] sensors - tabela z odczytami odległości z czujników, odległość wyrażona w centymetrach
+     *  \param[in] ranges - zakresy wartości dla poszczególnych kolorów wynikające z legendy przedstawionej powyżej
      */
     void setColour(int sensors[4],int ranges[3]);
 
